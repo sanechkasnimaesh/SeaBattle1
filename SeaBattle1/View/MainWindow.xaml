@@ -1,0 +1,100 @@
+﻿<Window x:Class="SeaBattle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SeaBattle"
+        Title="SeaBattle" Height="400" Width="900">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close"
+                        Executed="CloseCommandHandler"/>
+    </Window.CommandBindings>
+    <Window.Resources>
+        <local:InfoVisibilityConverter x:Key="InfoVisibilityConverter" />
+        <local:VisibilityConverter x:Key="VisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <local:BattleFieldView DataContext="{Binding UserBattleFieldVM}" Margin="10" />
+            <local:BattleFieldView DataContext="{Binding EnemyBattleFieldVM}" Margin="10" />
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel x:Name="Stage1" Orientation="Vertical">
+                    <StackPanel.Visibility>
+                        <MultiBinding Converter="{StaticResource InfoVisibilityConverter}" >
+                            <Binding RelativeSource="{RelativeSource Self}" />
+                            <Binding Path="MyGame.Stage"/>
+                        </MultiBinding>
+                    </StackPanel.Visibility>
+                    <TextBlock Text="Stage 1" TextAlignment="Center" Margin="0,10,0,0" />
+                    <Label Content="Расставьте корабли на своем поле!" Margin="5,0,0,0"/>
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\LeftMouseButton.png" Height="20" Margin="10,0,0,0"/>
+                        <Label Content="Рисовать"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\RightMouseButton.png" Height="20"  Margin="10,0,0,0" />
+                        <Label Content="Удалить"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="1 x "/>
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="2 x "/>
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="3 x "/>
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="4 x "/>
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\HealthyCell.jpg" Height="20"  Margin="0" />
+                    </StackPanel>
+                    <Button Content="Проверить и начать" Margin="0,10,0,0" Command="{Binding SetStage2}" />
+                    <Button Content="В меню" Command="{Binding GoToMenuCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <StackPanel x:Name="Stage2" Orientation="Vertical">
+                    <StackPanel.Visibility>
+                        <MultiBinding Converter="{StaticResource InfoVisibilityConverter}" >
+                            <Binding RelativeSource="{RelativeSource Self}" />
+                            <Binding Path="MyGame.Stage"/>
+                        </MultiBinding>
+                    </StackPanel.Visibility>
+
+                    <TextBlock Text="Stage 2" TextAlignment="Center" Margin="0,10,0,0" />
+                    <Label Content="Борись!" Margin="5,0,0,0" />
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\user\Source\Repos\SeaBattle\SeaBattle1\img\LeftMouseButton.png" Height="20" Margin="10,0,0,0"/>
+                        <Label Content="Сделать выстрел"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Твои очки: "/>
+                        <Label Content="{Binding MyGame.UserScores}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Очки врага: "/>
+                        <Label Content="{Binding MyGame.EnemyScores}"/>
+                    </StackPanel>
+                    <Button Content="Я сдаюсь :(" Margin="10" Command="{Binding SetStage3}" />
+                </StackPanel>
+
+                <StackPanel x:Name="Stage3" Orientation="Vertical">
+                    <StackPanel.Visibility>
+                        <MultiBinding Converter="{StaticResource InfoVisibilityConverter}" >
+                            <Binding RelativeSource="{RelativeSource Self}" />
+                            <Binding Path="MyGame.Stage"/>
+                        </MultiBinding>
+                    </StackPanel.Visibility>
+                    <Button Content="В меню" Command="{Binding GoToMenuCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

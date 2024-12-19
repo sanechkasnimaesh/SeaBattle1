@@ -1,0 +1,14 @@
+﻿<Window x:Class="SeaBattle.View.MainMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Морской бой" Height="500" Width="500">
+
+    <Grid Background="LightBlue">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Морской бой" FontSize="34" Margin="0,0,0,20"/>
+            <Button Content="Играть" Command="{Binding PlayCommand}" Width="100" Margin="0,0,0,10"/>
+            <Button Content="Статистика" Command="{Binding ShowStatsCommand}" Width="100" Margin="0,0,0,10"/>
+            <Button Content="Выход" Command="{Binding ExitCommand}" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SeaBattle.App" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.BattleField">
+    <Position X="15.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAAAABAIAAAAAAQiAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>BattleField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.BattleFieldView" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BattleFieldView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.Boat" BaseTypeListCollapsed="true">
+    <Position X="21" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAgIAIACAAAgAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>Boat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.Cell" BaseTypeListCollapsed="true">
+    <Position X="25.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAgABBAAACABgAAICAAAAIAgAAAAAAABABmACAAAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.CellView" Collapsed="true">
+    <Position X="27.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CellView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.EnemyBattleField">
+    <Position X="15" Y="6.25" Width="2" />
+    <InheritanceLine Type="SeaBattle.BattleField" FixedToPoint="true">
+      <Path>
+        <Point X="16.25" Y="5.459" />
+        <Point X="16.25" Y="5.875" />
+        <Point X="17" Y="5.875" />
+        <Point X="17" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAEAAAAACAAAAACAAAAAA=</HashCode>
+      <FileName>EnemyBattleField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.Game" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAgAAAQIAIAIhAAQAgCAgAACICAghAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.InfoVisibilityConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InfoVisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.362" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.Leader" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAYAAAAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Leader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.LeadershipReaderWriter">
+    <Position X="30.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACCAAAQAAABAAAAAAAIAAAACQAAAAAIAAAA=</HashCode>
+      <FileName>LeadershipReaderWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.LeadersWindow" Collapsed="true">
+    <Position X="34.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>LeadersWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.MainWindow" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.MainWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAIAAAAAAggABAAAAAAAAAQAgAACA=</HashCode>
+      <FileName>MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.StageButtonClickCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAgAAAABBAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.CellStyleConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StyleConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.UserBattleField">
+    <Position X="17.25" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAEAAAAAAAAEAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserBattleField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.VisibilityConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.Properties.Settings" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.BattleFieldViewModel" Collapsed="true">
+    <Position X="17.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BattleFieldViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.CellViewModel" Collapsed="true">
+    <Position X="27.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAABAAAAAAAAAAAAABAAIAAAAAAA=</HashCode>
+      <FileName>CellViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SeaBattle.CellClickCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAACAAQAAEAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>CellViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.LeadersWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAiAAAAIAIABgACIAgAAAAAAAECAAIAAAAAA=</HashCode>
+      <FileName>LeadersWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SeaBattle.LeaderButtonClickCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAEAgAAAAAABAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>LeadersWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Enum Name="SeaBattle.BoatState" Collapsed="true">
+    <Position X="23" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Boat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SeaBattle.BoatType" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAJAAAAAAAIA=</HashCode>
+      <FileName>Boat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SeaBattle.CellStyle" Collapsed="true">
+    <Position X="27.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAIAAIABAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SeaBattle.GameStage" Collapsed="true">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAIAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SeaBattle.Actor" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SeaBattle.GameResult" Collapsed="true">
+    <Position X="12" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

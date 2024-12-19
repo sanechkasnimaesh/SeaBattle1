@@ -1,0 +1,16 @@
+﻿<Window x:Class="SeaBattle.StatsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Статистика" Height="300" Width="400">
+    <Grid>
+        <ListView ItemsSource="{Binding GameStats}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Счет игрока" DisplayMemberBinding="{Binding UserScore}" />
+                    <GridViewColumn Header="Счет компьютера" DisplayMemberBinding="{Binding EnemyScore}" />
+                    <GridViewColumn Header="Время начала игры" DisplayMemberBinding="{Binding StartTime}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

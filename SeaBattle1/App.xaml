@@ -1,0 +1,55 @@
+﻿<Application x:Class="SeaBattle.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="EmptyBrush" Color="#f0f0f0" />
+        <SolidColorBrush x:Key="HealthyBrush" Color="#A2D9F7" />
+        <ImageBrush x:Key="WoundedBrush" ImageSource="img/WoundedCell.jpg" />
+        <ImageBrush x:Key="DeadBrush" ImageSource="img/DeadCell.jpg" />
+        <ImageBrush x:Key="ShootedBrush" ImageSource="img/ShootedCell.jpg" />
+
+        <Style x:Key="GeneralCellStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="DarkGray" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="Fog" TargetType="{x:Type Button}" BasedOn="{StaticResource GeneralCellStyle}">
+            <Setter Property="Control.Background" Value="LightGray"/>
+            <Setter Property="Control.BorderThickness" Value="1"/>
+
+        </Style>
+        <Style x:Key="Empty" TargetType="{x:Type Button}"  BasedOn="{StaticResource GeneralCellStyle}">
+            <Setter Property="Control.Background" Value="{StaticResource EmptyBrush}"/>
+            <Setter Property="Control.BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Key="Shooted" TargetType="{x:Type Button}"  BasedOn="{StaticResource GeneralCellStyle}">
+            <Setter Property="Control.Background" Value="{StaticResource ShootedBrush}"/>
+            <Setter Property="Control.BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Key="HealthyCell" TargetType="{x:Type Button}"  BasedOn="{StaticResource GeneralCellStyle}">
+            <Setter Property="Control.Background" Value="{StaticResource HealthyBrush}"/>
+            <Setter Property="Control.BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Key="WoundedCell" TargetType="{x:Type Button}"  BasedOn="{StaticResource GeneralCellStyle}">
+            <Setter Property="Control.Background" Value="{StaticResource WoundedBrush}"/>
+            <Setter Property="Control.BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Key="DeadCell" TargetType="{x:Type Button}"  BasedOn="{StaticResource GeneralCellStyle}">
+            <Setter Property="Control.Background" Value="{StaticResource DeadBrush}"/>
+            <Setter Property="Control.BorderThickness" Value="1"/>
+        </Style>
+    </Application.Resources>
+</Application>

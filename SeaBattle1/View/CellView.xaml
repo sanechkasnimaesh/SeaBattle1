@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="SeaBattle.CellView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SeaBattle"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="30">
+
+
+    <UserControl.Resources>
+        <local:CellStyleConverter x:Key="StyleConverter" />
+        <local:VisibilityConverter x:Key="VisibilityConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Button x:Name="CellButton" >
+            <Button.Style>
+                <MultiBinding Converter="{StaticResource StyleConverter}" >
+                    <Binding Path="Cell.IsInvisible"/>
+                    <Binding Path="Cell.Style"/>
+                </MultiBinding>
+            </Button.Style>
+
+            <Button.InputBindings>
+                <MouseBinding Gesture="LeftClick" Command="{Binding LeftClick}" />
+                <MouseBinding Gesture="RightClick" Command="{Binding RightClick}" />
+            </Button.InputBindings>
+            <Border BorderBrush="Red" BorderThickness="1" Visibility="{Binding Cell.IsLastShooted, Converter={StaticResource  VisibilityConverter} }" Height="28" Width="28" />
+        </Button>
+    </Grid>
+</UserControl>
